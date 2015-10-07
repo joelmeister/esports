@@ -5,7 +5,6 @@
 <!--[if (IE 9)]><html class="no-js ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
 <head>
-<base href="../">
 
 <!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -104,171 +103,17 @@
         
         <nav id="menu">
         	<ul id="menu-nav">
-            	<li><a href="index.html#home-slider" class="external">Home</a></li>
-				<li><a href="html/lol.html" class="external">LoL</a></li>
-				<li class="current"><a href="html/dota.html" class="external">DotA</a></li>
-                <li><a href="#work">Our Work</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+            	<li><a href="index.html" class="external">Home</a></li>
+				<li><a href="lol.php" class="external">LoL</a></li>
+				<li><a href="dota.php" class="external">DotA</a></li>
+                <li><a href="profile.php" class="external">Profile</a></li>
+				<li class="current"><a href="javascript:void(0);" class="external">About us</a></li>
             </ul>
         </nav>
         
     </div>
 </header>
 <!-- End Header -->
-
-<!-- Our Work Section -->
-<div id="work" class="page">
-	<div class="container">
-    	<!-- Title Page -->
-        <div class="row">
-            <div class="span12">
-                <div class="title-page">
-                    <h2 class="title">League of Legends</h2>
-                    <h3 class="title-description">Check Out Our Projects on <a href="#">Dribbble</a>.</h3>
-                </div>
-            </div>
-        </div>
-        <!-- End Title Page -->
-        
-        <!-- Portfolio Projects -->
-        <div class="row">
-        	<div class="span3">
-            	<!-- Filter -->
-                <nav id="options" class="work-nav">
-                    <ul id="filters" class="option-set" data-option-key="filter">
-                    	<li class="type-work">Type of Work</li>
-                        <li><a href="#filter" data-option-value="*" class="selected">All Projects</a></li>
-                        <li><a href="#filter" data-option-value=".design">Design</a></li>
-                        <li><a href="#filter" data-option-value=".photography">Photography</a></li>
-                        <li><a href="#filter" data-option-value=".video">Video</a></li>
-                    </ul>
-                </nav>
-                <!-- End Filter -->
-            </div>
-            
-            <div class="span9">
-            	<div class="row">
-                	<section id="projects">
-                    	<ul id="thumbs">
-                        
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 design">
-                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The City" href="_include/img/work/full/image-01-full.jpg">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-01.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 design">
-                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Office" href="_include/img/work/full/image-02-full.jpg">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-02.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 photography">
-                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Mountains" href="_include/img/work/full/image-03-full.jpg">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-03.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 video">
-                            	<!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
-                            	<a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Vimeo" href="http://vimeo.com/51460511">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-08.jpg" alt="Video">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 photography">
-                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Sea" href="_include/img/work/full/image-04-full.jpg">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-04.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 photography">
-                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Clouds" href="_include/img/work/full/image-05-full.jpg">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-05.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 video">
-                            	<!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
-                            	<a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Vimeo" href="http://vimeo.com/50834315">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-09.jpg" alt="Video">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 design">
-                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Dark" href="_include/img/work/full/image-06-full.jpg">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-06.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                        	<!-- End Item Project -->
-                            
-							<!-- Item Project and Filter Name -->
-                        	<li class="item-thumbs span3 design">
-                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Beach" href="_include/img/work/full/image-07-full.jpg">
-                                	<span class="overlay-img"></span>
-                                    <span class="overlay-img-thumb font-icon-plus"></span>
-                                </a>
-                                <!-- Thumb Image and Description -->
-                                <img src="_include/img/work/thumbs/image-07.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                            </li>
-                        	<!-- End Item Project -->
-                        </ul>
-                    </section>
-                    
-            	</div>
-            </div>
-        </div>
-        <!-- End Portfolio Projects -->
-    </div>
-</div>
-<!-- End Our Work Section -->
 
 <!-- About Section -->
 <div id="about" class="page-alternate">
@@ -296,15 +141,17 @@
                 </div>
                 <img src="_include/img/profile/profile-01.jpg" alt="John Doe">
             </div>
-            <h3 class="profile-name">John Doe</h3>
-            <p class="profile-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat <a href="#">hendrerit dictum</a>. 
-            Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <h3 class="profile-name">Joel Meister</h3>
+            <p class="profile-description">My love of video games led me to a career in software development, and then brought me in to the world of E-Sports!   
+            Check out my personal web page at <a href="http://joelmeister.net">joelmeister.net</a>.</p>
             	
-            <div class="social">
+			<div class="social">
             	<ul class="social-icons">
-                	<li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="font-icon-social-dribbble"></i></a></li>
-                    <li><a href="#"><i class="font-icon-social-facebook"></i></a></li>
+                	<li><a href="http://twitter.com/jrm1209"><i class="font-icon-social-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/joel.meister.1"><i class="font-icon-social-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/joelrmeister"><i class="font-icon-social-linkedin"></i></a></li>
+                    <li><a href="plus.google.com/108713380785575315626"><i class="font-icon-social-google-plus"></i></a></li>
+                    <li><a href="mailto:joelmeister1209@gmail.com"><i class="font-icon-social-email"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -363,6 +210,7 @@
 <!-- End About Section -->
 
 
+
 <!-- Contact Section -->
 <div id="contact" class="page">
 <div class="container">
@@ -371,7 +219,7 @@
         <div class="span12">
             <div class="title-page">
                 <h2 class="title">Get in Touch</h2>
-                <h3 class="title-description">Weâ€™re currently accepting new client projects. We look forward to serving you.</h3>
+                <h3 class="title-description">We’re currently accepting new client projects. We look forward to serving you.</h3>
             </div>
         </div>
     </div>
@@ -406,14 +254,14 @@
         	<div class="contact-details">
         		<h3>Contact Details</h3>
                 <ul>
-                    <li><a href="#">hello@brushed.com</a></li>
-                    <li>(916) 375-2525</li>
+                    <li><a href="mailto:joelmeister1209@gmail.com">joelmeister1209@gmail.com</a></li>
+                    <li>(555) 555-5555</li>
                     <li>
-                        Brushed Studio
+                        Joel Meister
                         <br>
-                        5240 Vanish Island. 105
+                        Address
                         <br>
-                        Unknow
+                        City, State Zip
                     </li>
                 </ul>
             </div>
@@ -430,7 +278,7 @@
     	<div class="row">
             <div class="span12">
                 <div class="follow">
-                    <a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><i class="font-icon-social-twitter"></i></a>
+                    <a href="https://twitter.com/jrm1209" title="Follow Me on Twitter" target="_blank"><i class="font-icon-social-twitter"></i></a>
                 </div>
                     
                 <div id="ticker" class="query"> 
@@ -442,6 +290,7 @@
 <!-- End Twitter Feed -->
 
 <!-- Socialize -->
+<!--
 <div id="social-area" class="page">
 	<div class="container">
     	<div class="row">
@@ -463,6 +312,7 @@
         </div>
     </div>
 </div>
+-->
 <!-- End Socialize -->
 
 <!-- Footer -->

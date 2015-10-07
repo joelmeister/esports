@@ -1,0 +1,55 @@
+h2, label, td {
+	color: #7F8289;
+}
+
+th {
+	border: 1px solid #DE5E00;
+}
+
+
+select, input{
+	color: #DE5E60;
+}
+
+select{
+	width: 75px;
+}
+
+
+td, select, input {
+	background-color: black;
+	border: 1px solid #DE5E00;
+}
+
+td > a {
+	text-decoration: underline;
+}
+
+.center {
+	text-align: center;
+}
+
+.paginate_button{
+	background-color:black;
+	margin-top: 15px;
+}
+
+#playersTable_info, #teamsTable_info{
+	margin-top: 10px;
+	color: #7F8289;
+}
+
+a.current {
+	color: #DE5E00;
+	border: 1px solid #DE5E00;
+}
+
+a.disabled {
+	color: #7F8289;
+	border: 1px solid #7F8289;
+}
+
+.container{
+	background:rgba(0,0,0,0.9);
+	padding: 15px;
+}

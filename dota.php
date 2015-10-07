@@ -5,7 +5,6 @@
 <!--[if (IE 9)]><html class="no-js ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
 <head>
-<base href="../">
 
 <!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -99,17 +98,16 @@
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         
         <div id="logo">
-        	<a id="goUp" href="#home-slider" title="Brushed | Responsive One Page Template">Brushed Template</a>
+        	<a id="goUp" href="#" title="E-Sports | All things E-Sports!">Brushed Template</a>
         </div>
         
         <nav id="menu">
         	<ul id="menu-nav">
-            	<li><a href="index.html#home-slider" class="external">Home</a></li>
-				<li class="current"><a href="lol.html" class="external">LoL</a></li>
-				<li><a href="html/dota.html" class="external">DotA</a></li>
-                <li><a href="#work">Our Work</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+            	<li><a href="index.html" class="external">Home</a></li>
+				<li><a href="lol.php" class="external">LoL</a></li>
+				<li class="current"><a href="javascript:void(0);" class="external">DotA</a></li>
+                <li><a href="profile.php" class="external">Profile</a></li>
+                <li><a href="about.php" class="external">About us</a></li>
             </ul>
         </nav>
         

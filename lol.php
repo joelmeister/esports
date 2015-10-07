@@ -9,9 +9,9 @@
 <!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>E-Sports | All things E-Sports!</title>   
+<title>Brushed | Responsive One Page Template</title>   
 
-<meta name="description" content="All things E-Sports!" /> 
+<meta name="description" content="Insert Your Site Description" /> 
 
 <!-- Mobile Specifics -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +64,7 @@
 
 <!-- Analytics -->
 <script type="text/javascript">
-
+/*
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'Insert Your Code']);
   _gaq.push(['_trackPageview']);
@@ -74,14 +74,14 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
+*/
 </script>
 <!-- End Analytics -->
 
 </head>
 
 
-<body background="_include/img/background.png">
+<body>
 
 <!-- This section is for Splash Screen -->
 <div class="ole">
@@ -91,23 +91,6 @@
 </div>
 <!-- End of Splash Screen -->
 
-<!-- Homepage Slider -->
-<div id="home-slider">	
-    <div class="overlay"></div>
-
-    <div class="slider-text">
-    	<div id="slidecaption"></div>
-    </div>   
-	
-	<div class="control-nav">
-        <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
-        <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
-        <ul id="slide-list"></ul>
-        
-        <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
-    </div>
-</div>
-<!-- End Homepage Slider -->
 
 <!-- Header -->
 <header>
@@ -115,19 +98,16 @@
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         
         <div id="logo">
-        	<a id="goUp" href="#home-slider" title="E-Sports | All things E-Sports!">E-sports hub</a>
+        	<a id="goUp" href="#home-slider" title="Brushed | Responsive One Page Template">Brushed Template</a>
         </div>
         
         <nav id="menu">
         	<ul id="menu-nav">
-            	<li class="current"><a href="#">Home</a></li>
-				<li><a href="lol.php" class="external">LoL</a></li>
+            	<li><a href="index.html" class="external">Home</a></li>
+				<li class="current"><a href="javascript:void(0);" class="external">LoL</a></li>
 				<li><a href="dota.php" class="external">DotA</a></li>
+                <li><a href="about.php" class="external">About us</a></li>
                 <li><a href="profile.php" class="external">Profile</a></li>
-				<li><a href="recruit.php" class="external">Recruit</a></li>
-                <li><a href="about.php" class="external">About Us</a></li>
-                <li id="login-link" style="display:none;"><a href="login.php" class="external">Login</a></li>
-                <li id="register-link" style="display:none;"><a href="register.php" class="external">Register</a></li>
             </ul>
         </nav>
         
@@ -142,8 +122,7 @@
         <div class="row">
             <div class="span12">
                 <div class="title-page">
-                    <h2 class="title">Our Work</h2>
-                    <h3 class="title-description">Check Out Our Projects on <a href="#">Dribbble</a>.</h3>
+                    <h2 class="title">League of Legends</h2>
                 </div>
             </div>
         </div>
@@ -294,7 +273,7 @@
     	<div class="row">
             <div class="span12">
                 <div class="follow">
-                    <a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><i class="font-icon-social-twitter"></i></a>
+                    <a href="https://twitter.com/leagueoflegends" title="Official League of Legens twitter" target="_blank"><i class="font-icon-social-twitter"></i></a>
                 </div>
                     
                 <div id="ticker" class="query"> 
@@ -305,29 +284,6 @@
 </div>
 <!-- End Twitter Feed -->
 
-<!-- Socialize -->
-<div id="social-area" class="page">
-	<div class="container">
-    	<div class="row">
-            <div class="span12">
-                <nav id="social">
-                    <ul>
-                        <li><a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
-                        <li><a href="http://dribbble.com/Bluxart" title="Follow Me on Dribbble" target="_blank"><span class="font-icon-social-dribbble"></span></a></li>
-                        <li><a href="http://forrst.com/people/Bluxart" title="Follow Me on Forrst" target="_blank"><span class="font-icon-social-forrst"></span></a></li>
-                        <li><a href="http://www.behance.net/alessioatzeni" title="Follow Me on Behance" target="_blank"><span class="font-icon-social-behance"></span></a></li>
-                        <li><a href="https://www.facebook.com/Bluxart" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
-                        <li><a href="https://plus.google.com/105500420878314068694" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
-                        <li><a href="http://www.linkedin.com/in/alessioatzeni" title="Follow Me on LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
-                        <li><a href="http://themeforest.net/user/Bluxart" title="Follow Me on ThemeForest" target="_blank"><span class="font-icon-social-envato"></span></a></li>
-                        <li><a href="http://zerply.com/Bluxart/public" title="Follow Me on Zerply" target="_blank"><span class="font-icon-social-zerply"></span></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Socialize -->
 
 <!-- Footer -->
 <footer>
@@ -355,14 +311,32 @@
 <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
 <script src="_include/js/main.js"></script> <!-- Default JS -->
 <!-- End Js -->
+
 <script>
 jQuery(document).ready(function() {
-	var uname = window.localStorage.getItem('username');
-	console.log(uname);
-	if (!uname) {
-		$('#login-link').show();
-        $('#register-link').show();
+	function parseUrl( url ) {
+		var a = document.createElement('a');
+		a.href = url;
+		return a;
 	}
+	/*
+	$.ajax({
+		type: "GET",
+		url: "_include/php/loadlol.php",
+		contentType : "application/json", 
+		dataType: 'json',
+		data: {'stuff' : 'morestuff'},
+		cache: false,
+		success: function(data){
+			console.log('got success');		
+		},
+		error: function(jqXHR){
+			var json=jqXHR.responseText;
+			var obj = JSON.parse(json);
+			console.log('got fail');		
+		}
+	});
+	*/
 });
 </script>
 </body>
