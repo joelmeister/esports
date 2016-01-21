@@ -123,11 +123,11 @@
             	<li class="current"><a href="#">Home</a></li>
 				<li><a href="lol.php" class="external">LoL</a></li>
 				<li><a href="dota.php" class="external">DotA</a></li>
-                <li><a href="profile.php" class="external">Profile</a></li>
 				<li><a href="recruit.php" class="external">Recruit</a></li>
-                <li><a href="about.php" class="external">About Us</a></li>
+                <li id="profile-link"><a href="profile.php" class="external">Profile</a></li>
                 <li id="login-link" style="display:none;"><a href="login.php" class="external">Login</a></li>
                 <li id="register-link" style="display:none;"><a href="register.php" class="external">Register</a></li>
+                <li><a href="about.php" class="external">About Us</a></li>
             </ul>
         </nav>
         
@@ -359,7 +359,10 @@
 jQuery(document).ready(function() {
 	var uname = window.localStorage.getItem('username');
 	console.log(uname);
-	if (!uname) {
+	if (uname){		
+		$('#profile-link a').text(uname);
+		$('#profile-link a').attr("href","profile.php?username=" + uname);
+	} else {
 		$('#login-link').show();
         $('#register-link').show();
 	}

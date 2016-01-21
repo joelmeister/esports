@@ -9,9 +9,9 @@
 <!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>Esports profile</title>   
+<title>E-Sports | All things E-Sports!</title>   
 
-<meta name="description" content="Esports website" /> 
+<meta name="description" content="All things E-Sports!" /> 
 
 <!-- Mobile Specifics -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,6 +51,11 @@
 <!-- Google Font -->
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
 
+
+<link href="_include/css/dataTables.min.css" rel="stylesheet" type="text/css">
+<link href="_include/css/profile.css" rel="stylesheet" type="text/css">
+
+
 <!-- Fav Icon -->
 <link rel="shortcut icon" href="#">
 
@@ -64,7 +69,7 @@
 
 <!-- Analytics -->
 <script type="text/javascript">
-/*
+
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'Insert Your Code']);
   _gaq.push(['_trackPageview']);
@@ -74,15 +79,14 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-*/
-</script>
 
+</script>
 <!-- End Analytics -->
 
 </head>
 
 
-<body>
+<body background="_include/img/background.png">
 
 <!-- This section is for Splash Screen -->
 <div class="ole">
@@ -99,7 +103,7 @@
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         
         <div id="logo">
-        	<a id="goUp" href="#" title="Brushed | Responsive One Page Template">Brushed Template</a>
+        	<a id="goUp" href="#home-slider" title="E-Sports | All things E-Sports!">E-sports hub</a>
         </div>
         
         <nav id="menu">
@@ -107,8 +111,12 @@
             	<li><a href="index.html" class="external">Home</a></li>
 				<li><a href="lol.php" class="external">LoL</a></li>
 				<li><a href="dota.php" class="external">DotA</a></li>
-                <li class="current"><a href="javascript:void(0);" class="external">Profile</a></li>
+				<li><a href="recruit.php" class="external">Recruit</a></li>
+                <li id="profile-link" class="current"><a href="javascript:void(0);" class="external">Profile</a></li>
+                <li id="login-link" style="display:none;"><a href="login.php" class="external">Login</a></li>
+                <li id="register-link" style="display:none;"><a href="register.php" class="external">Register</a></li>
                 <li><a href="about.php" class="external">About us</a></li>
+                <li id="logout-link" style="display:none;"><a class="external">Log out</a></li>
             </ul>
         </nav>
         
@@ -116,78 +124,86 @@
 </header>
 <!-- End Header -->
 
-<!-- About Section -->
-<div id="about" class="page-alternate-profile">
-<div class="container">
-    <!-- Title Page -->
-	
-    <div class="row">
-        <div class="span12">
-            <div class="title-page">
-                <h2 class="profile-title">Username</h2>
-                <h3 class="profile-title-description">Brief description</h3>
-            </div>
-        </div>
-    </div>
-
-    <!-- End Title Page -->
-</div>
-</div>
-
-<div id="about" class="class=page">
-<div class="container">
-    <!-- Title Page -->
-    <div class="row">
-        <div class="span12">
-            <div class="title-page">
-            </div>
-        </div>
-    </div>
-    <!-- End Title Page -->
-    
-    <!-- People -->
-    <div class="row">
-        <!-- Start Profile -->
-    	<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">User</span>
+<!-- Our Work Section -->
+<div id="work" class="page">
+	<div class="container">
+    	<!-- Title Page -->
+        <div class="row">
+            <div class="span12">
+                <div class="title-page">
+                    <h1 class="title profile-name" id="profile-name">Username</h1>
+                    <h3>Individual, Team</h3>
                 </div>
-                <img src="_include/img/profile/profile-01.jpg" alt="Username">
             </div>
-            <h3 class="profile-name" id="profile-name">Username</h3>
-			<p id='about'>About section</p>
-            	
-            <div class="social">
-            	<ul class="social-icons">
-                	<li><a href="http://twitter.com/jrm1209"><i class="font-icon-social-twitter"></i></a></li>
-                    <li><a href="https://www.facebook.com/joel.meister.1"><i class="font-icon-social-facebook"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/joelrmeister"><i class="font-icon-social-linkedin"></i></a></li>
-                    <li><a href="plus.google.com/108713380785575315626"><i class="font-icon-social-google-plus"></i></a></li>
-                    <li><a href="mailto:joelmeister1209@gmail.com"><i class="font-icon-social-email"></i></a></li>
-					<!--
-                    <li><a href="#"><i class="font-icon-social-vimeo"></i></a></li>
-                    <li><a href="#"><i class="font-icon-social-dribbble"></i></a></li>
-					-->
+        </div>
+        
+        <!-- Portfolio Projects -->
+        <div class="row">
+            <div class="span6">
+                <!--<img class="profile" src="_include/images/profPic.png" height="200px" width="200px">-->
+				<img class="profile" height="200px" width="200px">
+            </div>       
+            <div class="span3 right">
+                <h2 class="list-header">Games</h2>
+                <ul>
+                    <li id="lol-game-link">LoL</li>
+                    <li id="dota-game-link">Dota 2</li>
+                    <li id="csgo-game-link">CS:GO</li>
                 </ul>
             </div>
         </div>
-        <!-- End Profile -->        
-    </div>
-    <!-- End People -->
-</div>
-</div>
-<!-- End About Section -->
+        <div class="row">
+            <div class="span6">
+                <br><br>
+                <h2>About Me</h2>
+				<div class="social">
+					<ul class="social-icons">
+						<li id='twitter-link'><a><i class="font-icon-social-twitter"></i></a></li>
+						<li id='facebook-link'><a><i class="font-icon-social-facebook"></i></a></li>
+						<li id='linkedin-link'><a><i class="font-icon-social-linkedin"></i></a></li>
+						<li id='google-link'><a><i class="font-icon-social-google-plus"></i></a></li>
+						<li id='email-link'><a><i class="font-icon-social-email"></i></a></li>
 
-<div id="social-area" class="page">
+						<li id='vimeo-link'><a><i class="font-icon-social-vimeo"></i></a></li>
+						<li id='dribbble-link'><a><i class="font-icon-social-dribbble"></i></a></li>
+
+					</ul>
+				</div>
+                <p id='about'>This is a longer about me than "leet haxor" so we can actually see what it looks like with some damn text in here.</p>
+            </div>
+            <div class="span3 right">
+                <h2 class="list-header">Teams</h2>
+                <ul>
+                    <li>Team 1</li>
+                    <li>Team 2</li>
+                    <li>Team 3</li>
+                </ul>
+            </div>
+        </div>
+        <br><br>
+            
+        <br>
+        <!-- End Portfolio Projects -->
+    </div>
+</div>
+<!-- End Our Work Section -->
+
+<!-- Twitter Feed
+<div id="twitter-feed" class="page-alternate">
 	<div class="container">
     	<div class="row">
             <div class="span12">
+                <div class="follow">
+                    <a href="http://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><i class="font-icon-social-twitter"></i></a>
+                </div>
+                    
+                <div id="ticker" class="query"> 
+                </div>
             </div>
         </div>
     </div>
 </div>
+ End Twitter Feed -->
 
 <!-- Footer -->
 <footer>
@@ -213,49 +229,10 @@
 <script src="_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
 <script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
 <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
-<script src="_include/js/jquery.main.js"></script> <!-- Default JS -->
 <script src="_include/js/main.js"></script> <!-- Default JS -->
+<script src="_include/js/dataTables.min.js"></script>
 <!-- End Js -->
-<script>
-jQuery(document).ready(function() {
-	var data = parseUrl(window.location.href).search.replace('?','');
-	console.log(data);
-	
-	jQuery(document).ready(function() {
-		$.ajax({
-			type: "GET",
-			url: "_include/php/db_functions.php",
-			contentType : "application/json", 
-			dataType: 'json',
-			data: data,
-			cache: false,
-			success: function(data){
-				displayPage(data);
-			},
-			error: function(jqXHR){
-				var json=jqXHR.responseText;
-				var obj = JSON.parse(json);
-				$("#errmsg").html(obj.error);
-			}
-		});
-	});
-	function displayPage(data){
-		console.log('output: ' + JSON.stringify(data));
-		$('h3#profile-name').html(data.username);
-		$('.overlay-text-thumb').html(data.username);
-		$('.profile-title').html(data.username);
-		
-		$('p#about').html(data.about);
-		$('.profile-title-description').html(data.about);
-		
-		return false;
-	}
-	function parseUrl( url ) {
-		var a = document.createElement('a');
-		a.href = url;
-		return a;
-	}
-});
-</script>
+<script src="_include/js/jquery.main.js"></script>
+<script src="_include/js/jquery-profile.js"></script>
 </body>
 </html>

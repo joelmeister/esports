@@ -45,7 +45,7 @@
 <link href="_include/css/responsive.css" rel="stylesheet">
 
 <!-- Supersized -->
-<link href="_include/css/supersized.css" rel="stylesheet">
+<link href="_include/images/profPic.pngs>upersized.css" rel="stylesheet">
 <link href="_include/css/supersized.shutter.css" rel="stylesheet">
 
 <!-- Google Font -->
@@ -53,7 +53,7 @@
 
 
 <link href="_include/css/dataTables.min.css" rel="stylesheet" type="text/css">
-<link href="_include/css/customTable.css" rel="stylesheet" type="text/css">
+<link href="_include/css/profile.css" rel="stylesheet" type="text/css">
 
 
 <!-- Fav Icon -->
@@ -66,8 +66,6 @@
 
 <!-- Modernizr -->
 <script src="_include/js/modernizr.js"></script>
-
-<script src="_include/js/customTable.js"></script>
 
 <!-- Analytics -->
 <script type="text/javascript">
@@ -90,6 +88,14 @@
 
 <body background="_include/img/background.png">
 
+<!-- This section is for Splash Screen -->
+<div class="ole">
+<section id="jSplash">
+	<div id="circle"></div>
+</section>
+</div>
+<!-- End of Splash Screen -->
+
 
 <!-- Header -->
 <header>
@@ -102,14 +108,14 @@
         
         <nav id="menu">
         	<ul id="menu-nav">
-            	<li><a href="index.html" class="external">Home</a></li>
+            	<li class="current"><a href="#home-slider">Home</a></li>
 				<li><a href="lol.php" class="external">LoL</a></li>
 				<li><a href="dota.php" class="external">DotA</a></li>
-				<li class="current"><a href="javascript:void(0);" class="external">Recruit</a></li>
-                <li id="profile-link"><a href="profile.php" class="external">Profile</a></li>
+                <li><a href="profile.php" class="external">Profile</a></li>
+				<li><a href="shortcodes.php" class="external">Shortcodes</a></li>
+                <li><a href="about.php" class="external">About Us</a></li>
                 <li id="login-link" style="display:none;"><a href="login.php" class="external">Login</a></li>
                 <li id="register-link" style="display:none;"><a href="register.php" class="external">Register</a></li>
-                <li><a href="about.php" class="external">About Us</a></li>
             </ul>
         </nav>
         
@@ -124,80 +130,44 @@
         <div class="row">
             <div class="span12">
                 <div class="title-page">
-                    <h2 class="title">Players and Teams</h2>
+                    <h1 class="title">Chris Levine</h1>
+                    <h3>Individual, Team</h3>
                 </div>
             </div>
         </div>
-        <!-- End Title Page -->
         
         <!-- Portfolio Projects -->
         <div class="row">
-        	<div class="span3">
-            	<!-- Filter -->
-                <nav id="options" class="work-nav">
-                    <ul id="filters" class="option-set" data-option-key="filter">
-                        <li><a href="javascript:void(0);" data-option-value="*" id="playersLink" class="selected" onclick="showPlayersTable();">Individuals</a></li>
-                        <li><a href="javascript:void(0);" data-option-value=".design" id="teamsLink" onclick="showTeamsTable();">Teams</a></li>
-                    </ul>
-                </nav>
-                <!-- End Filter -->
-            </div>
-            
-            <div class="span8">
-            	<div class="row">
-					<div id="playersTableDiv">    
-						<table class="searchTable" id="playersTable" border="0" cellspacing="5" cellpadding="0">
-							<thead>
-								<tr>
-									<th>Username</th>
-									<th>Name</th>
-									<th>Age</th>
-									<th>City</th>
-									<th>State</th>
-									<th>Country</th>
-									<th>Team</th>
-									<th>Looking?</th>
-									<th>Game</th>
-								</tr>
-							</thead>
-							<tbody>
-							</tbody>
-						</table>
-					</div>
-
-					<div id="teamsTableDiv" style="display: none;">
-						<table class="searchTable" id="teamsTable" border="0" cellspacing="5" cellpadding="0">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Game</th>
-									<th>Rank</th>
-									<th>Link</th>
-								</tr>
-							</thead>
-
-							<!-- 
-							Same thing... this will be dynamic.
-							<?php //buildTeamsTable(); ?>
-							-->
-							<tr>
-								<td>Chris' Team</td>
-								<td>Game 3</td>
-								<td>1st duh</td>
-								<td class="center"><a href="profile.php">View Profile</a></td>
-							</tr>
-							<tr>
-								<td>Joel's Team</td>
-								<td>Game 4</td>
-								<td>last duh</td>
-								<td class="center"><a href="profile.php?username=lessthanwaffles">View Profile</a></td>
-							</tr>
-						</table>
-					</div>
-                    
-            	</div>
+            <div class="span6">
+                <img class="profile" src="_include/images/profPic.png" height="200px" width="200px">
+            </div>       
+            <div class="span3 right">
+                <h2 class="list-header">Games</h2>
+                <ul>
+                    <li>Game 1</li>
+                    <li>Game 2</li>
+                    <li>Game 3</li>
+                </ul>
             </div>
         </div>
+        <div class="row">
+            <div class="span6">
+                <br><br>
+                <h2>About Me</h2>
+                <p>This is a longer about me than "leet haxor" so we can actually see what it looks like with some damn text in here.</p>
+            </div>
+            <div class="span3 right">
+                <h2 class="list-header">Teams</h2>
+                <ul>
+                    <li>Team 1</li>
+                    <li>Team 2</li>
+                    <li>Team 3</li>
+                </ul>
+            </div>
+        </div>
+        <br><br>
+            
+        <br>
         <!-- End Portfolio Projects -->
     </div>
 </div>
@@ -271,7 +241,64 @@
 <script src="_include/js/main.js"></script> <!-- Default JS -->
 <script src="_include/js/dataTables.min.js"></script>
 <!-- End Js -->
-<script src="_include/js/jquery.main.js"></script>
-<script src="_include/js/jquery-recruit.js"></script>
+<script>
+jQuery(document).ready(function() {
+	var data = parseUrl(window.location.href).search.replace('?','');
+	if (! data){
+		var uname = window.localStorage.getItem('username');
+		if (!uname) return false;
+		console.log(parseUrl(window.location.href));
+		window.location.replace(parseUrl(window.location.href) + "?username=" + uname);
+		//return false;
+	}
+	console.log(data);
+	
+	jQuery(document).ready(function() {
+		$.ajax({
+			type: "GET",
+			url: "_include/php/db_functions.php",
+			contentType : "application/json", 
+			dataType: 'json',
+			data: data,
+			cache: false,
+			success: function(data){
+				displayPage(data);
+			},
+			error: function(jqXHR){
+				var json=jqXHR.responseText;
+				var obj = JSON.parse(json);
+				$("#errmsg").html(obj.error);
+			}
+		});
+	});
+	
+	var uname = window.localStorage.getItem('username');
+	console.log(uname);
+	if (uname){		
+		$('#profile-link a').text(uname);
+		$('#profile-link a').attr("href","profile.php?" + uname);
+	} else {
+		$('#login-link').show();
+        $('#register-link').show();
+	}
+	
+	function displayPage(data){
+		console.log('output: ' + JSON.stringify(data));
+		$('h3#profile-name').html(data.username);
+		$('.overlay-text-thumb').html(data.username);
+		$('.profile-title').html(data.username);
+		
+		$('p#about').html(data.about);
+		$('.profile-title-description').html(data.about);
+		
+		return false;
+	}
+	function parseUrl( url ) {
+		var a = document.createElement('a');
+		a.href = url;
+		return a;
+	}
+});
+</script>
 </body>
 </html>

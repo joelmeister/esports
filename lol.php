@@ -106,8 +106,12 @@
             	<li><a href="index.html" class="external">Home</a></li>
 				<li class="current"><a href="javascript:void(0);" class="external">LoL</a></li>
 				<li><a href="dota.php" class="external">DotA</a></li>
-                <li><a href="about.php" class="external">About us</a></li>
+				<li><a href="recruit.php" class="external">Recruit</a></li>
                 <li><a href="profile.php" class="external">Profile</a></li>
+				
+                <li id="login-link" style="display:none;"><a href="login.php" class="external">Login</a></li>
+                <li id="register-link" style="display:none;"><a href="register.php" class="external">Register</a></li>
+                <li><a href="about.php" class="external">About us</a></li>
             </ul>
         </nav>
         
@@ -314,10 +318,14 @@
 
 <script>
 jQuery(document).ready(function() {
-	function parseUrl( url ) {
-		var a = document.createElement('a');
-		a.href = url;
-		return a;
+	var uname = window.localStorage.getItem('username');
+	console.log(uname);
+	if (uname){		
+		$('#profile-link a').text(uname);
+		$('#profile-link a').attr("href","profile.php?username=" + uname);
+	} else {
+		$('#login-link').show();
+        $('#register-link').show();
 	}
 	/*
 	$.ajax({

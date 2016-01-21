@@ -45,7 +45,7 @@
 <link href="_include/css/responsive.css" rel="stylesheet">
 
 <!-- Supersized -->
-<link href="_include/css/supersized.css" rel="stylesheet">
+<link href="_include/images/profPic.pngs>upersized.css" rel="stylesheet">
 <link href="_include/css/supersized.shutter.css" rel="stylesheet">
 
 <!-- Google Font -->
@@ -53,7 +53,7 @@
 
 
 <link href="_include/css/dataTables.min.css" rel="stylesheet" type="text/css">
-<link href="_include/css/customTable.css" rel="stylesheet" type="text/css">
+<link href="_include/css/profileEdit.css" rel="stylesheet" type="text/css">
 
 
 <!-- Fav Icon -->
@@ -66,8 +66,6 @@
 
 <!-- Modernizr -->
 <script src="_include/js/modernizr.js"></script>
-
-<script src="_include/js/customTable.js"></script>
 
 <!-- Analytics -->
 <script type="text/javascript">
@@ -90,6 +88,14 @@
 
 <body background="_include/img/background.png">
 
+<!-- This section is for Splash Screen -->
+<div class="ole">
+<section id="jSplash">
+	<div id="circle"></div>
+</section>
+</div>
+<!-- End of Splash Screen -->
+
 
 <!-- Header -->
 <header>
@@ -102,14 +108,14 @@
         
         <nav id="menu">
         	<ul id="menu-nav">
-            	<li><a href="index.html" class="external">Home</a></li>
+            	<li class="current"><a href="#home-slider">Home</a></li>
 				<li><a href="lol.php" class="external">LoL</a></li>
 				<li><a href="dota.php" class="external">DotA</a></li>
-				<li class="current"><a href="javascript:void(0);" class="external">Recruit</a></li>
-                <li id="profile-link"><a href="profile.php" class="external">Profile</a></li>
-                <li id="login-link" style="display:none;"><a href="login.php" class="external">Login</a></li>
-                <li id="register-link" style="display:none;"><a href="register.php" class="external">Register</a></li>
+                <li><a href="profile.php" class="external">Profile</a></li>
+				<li><a href="shortcodes.php" class="external">Shortcodes</a></li>
                 <li><a href="about.php" class="external">About Us</a></li>
+                <li id="login-link" style="display:none;"><a href="html/login.php" class="external">Login</a></li>
+                <li id="register-link" style="display:none;"><a href="register.php" class="external">Register</a></li>
             </ul>
         </nav>
         
@@ -124,81 +130,59 @@
         <div class="row">
             <div class="span12">
                 <div class="title-page">
-                    <h2 class="title">Players and Teams</h2>
+                    <h1 class="title">My Profile</h1>
                 </div>
             </div>
         </div>
-        <!-- End Title Page -->
         
-        <!-- Portfolio Projects -->
-        <div class="row">
-        	<div class="span3">
-            	<!-- Filter -->
-                <nav id="options" class="work-nav">
-                    <ul id="filters" class="option-set" data-option-key="filter">
-                        <li><a href="javascript:void(0);" data-option-value="*" id="playersLink" class="selected" onclick="showPlayersTable();">Individuals</a></li>
-                        <li><a href="javascript:void(0);" data-option-value=".design" id="teamsLink" onclick="showTeamsTable();">Teams</a></li>
-                    </ul>
-                </nav>
-                <!-- End Filter -->
+        <!-- updateResults will have a simple "you did it!" or "you suck!" message -->
+        <form action="updateResults.php">
+            <!-- Portfolio Projects -->
+            <div class="row">
+                <div class="span12">
+                        <h2 class="sub-heading">Profile Picture</h2>
+                        <div class="sub-content">
+                            <img class="profile" src="_include/images/profPic.png" height="200px" width="200px">
+                            <input type="file" name="profilePicture" accept="image/*">
+                        </div>
+                </div>
             </div>
-            
-            <div class="span8">
-            	<div class="row">
-					<div id="playersTableDiv">    
-						<table class="searchTable" id="playersTable" border="0" cellspacing="5" cellpadding="0">
-							<thead>
-								<tr>
-									<th>Username</th>
-									<th>Name</th>
-									<th>Age</th>
-									<th>City</th>
-									<th>State</th>
-									<th>Country</th>
-									<th>Team</th>
-									<th>Looking?</th>
-									<th>Game</th>
-								</tr>
-							</thead>
-							<tbody>
-							</tbody>
-						</table>
-					</div>
-
-					<div id="teamsTableDiv" style="display: none;">
-						<table class="searchTable" id="teamsTable" border="0" cellspacing="5" cellpadding="0">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Game</th>
-									<th>Rank</th>
-									<th>Link</th>
-								</tr>
-							</thead>
-
-							<!-- 
-							Same thing... this will be dynamic.
-							<?php //buildTeamsTable(); ?>
-							-->
-							<tr>
-								<td>Chris' Team</td>
-								<td>Game 3</td>
-								<td>1st duh</td>
-								<td class="center"><a href="profile.php">View Profile</a></td>
-							</tr>
-							<tr>
-								<td>Joel's Team</td>
-								<td>Game 4</td>
-								<td>last duh</td>
-								<td class="center"><a href="profile.php?username=lessthanwaffles">View Profile</a></td>
-							</tr>
-						</table>
-					</div>
-                    
-            	</div>
+            <br><br>
+            <div class="row">
+                <div class="span12">
+                    <h2 class="sub-heading">About Me</h2>
+                    <div class="sub-content">
+                        <textarea rows="6" cols="60">
+                            1337 H4X0R
+                        </textarea>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- End Portfolio Projects -->
+            <br><br>
+            <div class="row">
+                <div class="span12">
+                    <h2 class="sub-heading">Games</h2>
+                    <!--Show all games we offer here and let them select/deselect? or have a separate form underneath to let them enter new games? -->
+                    <div class="sub-content">
+                        <input class="games" type="checkbox" name="game1" value="Game 1"> &nbsp;&nbsp;Game 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class = "games" type="checkbox" name="game2" value="Game 2"> &nbsp;&nbsp;Game 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class = "games" type="checkbox" name="game2" value="Game 3"> &nbsp;&nbsp;Game 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class = "games" type="checkbox" name="game2" value="Game 4"> &nbsp;&nbsp;Game 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class = "games" type="checkbox" name="game2" value="Game 5"> &nbsp;&nbsp;Game 5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="span12">
+                    <div class="sub-content">
+                        <input class="submit" type="submit">
+                    </div>
+                </div>
+            </div>
+            <br>
+        </form>
+            <!-- End Portfolio Projects -->
     </div>
 </div>
 <!-- End Our Work Section -->
@@ -271,7 +255,19 @@
 <script src="_include/js/main.js"></script> <!-- Default JS -->
 <script src="_include/js/dataTables.min.js"></script>
 <!-- End Js -->
-<script src="_include/js/jquery.main.js"></script>
-<script src="_include/js/jquery-recruit.js"></script>
+<script>
+jQuery(document).ready(function() {
+	var uname = window.localStorage.getItem('username');
+	console.log(uname);
+	if (!uname) {
+		$('#login-link').show();
+        $('#register-link').show();
+	} else{
+		$('#profile-link a').attr("href","profile.php?username=" + uname);
+	}
+    $('#playersTable').dataTable();
+    $('#teamsTable').dataTable();
+});
+</script>
 </body>
 </html>

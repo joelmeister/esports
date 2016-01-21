@@ -2,10 +2,10 @@
 
 require_once("commonfunctions.php");
 debug_to_console('got here');
-//getnewsoflegends();
+//getNewsOfLegends();
 die();
 
-function getnewsoflegends(){
+function getNewsOfLegends(){
 	$data = file_get_contents('http://www.newsoflegends.com/');
 	$regex = '/class="post"/';
 	preg_match($regex,$data,$match);

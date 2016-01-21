@@ -1,0 +1,37 @@
+.container{
+	background:rgba(0,0,0,0.9);
+}
+.profile{
+	border-radius: 50%;
+	margin-right: 2%;
+}
+
+.sub-content{
+	padding-left: 30%;
+}
+
+.sub-heading{
+	text-align: center;
+}
+
+#game-list{
+	margin-left: 5%;
+	font-size: 24px;
+}
+
+#game-list>li{
+	padding-bottom: 2%;
+}
+
+textarea {
+	background-color: #ccc;
+}
+
+h1, h2, li {
+	color: #ccc;
+}
+
+.submit {
+	margin-left: 25%;
+	padding: .5%;
+}

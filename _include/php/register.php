@@ -102,9 +102,29 @@ class Register_Form{
 		$db_field = 'USERNAME,EMAIL,ACTUALNAME,PASSWORD';
 		$db_table = 'ESPORTS_USERS';
 		$db_value = "'".$this->username."','".$this->email."','".$this->name."','".$this->password."'";
-		/**/
+		/*Update registration info*/
 		$sql="INSERT INTO ".$db_table."  (".$db_field.") VALUES (".$db_value.");";
 		/**/
+		if (!mysqli_query($con,$sql)){
+			$this->response_html .= 'Failed to insert : '.mysqli_error($con);
+			$this->response_status = 0;	
+			return false;
+		}
+		/*Update recruiting table*/
+		$db_field = 'username,name,looking';
+		$db_table = 'ESPORTS_RECRUIT_USER';
+		$db_value = "'".$this->username."','".$this->name."','y'";
+		$sql="INSERT INTO ".$db_table."  (".$db_field.") VALUES (".$db_value.");";
+		if (!mysqli_query($con,$sql)){
+			$this->response_html .= 'Failed to insert : '.mysqli_error($con);
+			$this->response_status = 0;	
+			return false;
+		}
+		/*Update main profile table*/
+		$db_field = 'USERNAME,ACTUALNAME,EMAIL';
+		$db_table = 'ESPORTS_PROFILE';
+		$db_value = "'".$this->username."','".$this->name."','".$this->email."','";
+		$sql="INSERT INTO ".$db_table."  (".$db_field.") VALUES (".$db_value.");";
 		if (!mysqli_query($con,$sql)){
 			$this->response_html .= 'Failed to insert : '.mysqli_error($con);
 			$this->response_status = 0;	

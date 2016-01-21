@@ -9,9 +9,9 @@
 <!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>Brushed | Responsive One Page Template</title>   
+<title>Esports profile</title>   
 
-<meta name="description" content="Insert Your Site Description" /> 
+<meta name="description" content="Esports website" /> 
 
 <!-- Mobile Specifics -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +64,7 @@
 
 <!-- Analytics -->
 <script type="text/javascript">
-
+/*
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'Insert Your Code']);
   _gaq.push(['_trackPageview']);
@@ -74,8 +74,9 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
+*/
 </script>
+
 <!-- End Analytics -->
 
 </head>
@@ -98,7 +99,7 @@
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         
         <div id="logo">
-        	<a id="goUp" href="#" title="E-Sports | All things E-Sports!">Brushed Template</a>
+        	<a id="goUp" href="#" title="Brushed | Responsive One Page Template">Brushed Template</a>
         </div>
         
         <nav id="menu">
@@ -107,12 +108,11 @@
 				<li><a href="lol.php" class="external">LoL</a></li>
 				<li><a href="dota.php" class="external">DotA</a></li>
 				<li><a href="recruit.php" class="external">Recruit</a></li>
-                <li id="profile-link"><a href="profile.php" class="external">Profile</a></li>
+                <li id="profile-link" class="current"><a href="javascript:void(0);" class="external">Profile</a></li>
 				
                 <li id="login-link" style="display:none;"><a href="login.php" class="external">Login</a></li>
                 <li id="register-link" style="display:none;"><a href="register.php" class="external">Register</a></li>
-				<li class="current"><a href="about.php" class="external">About us</a></li>
-                <li id="logout-link" style="display:none;"><a class="external">Log out</a></li>
+                <li><a href="about.php" class="external">About us</a></li>
             </ul>
         </nav>
         
@@ -120,45 +120,62 @@
 </header>
 <!-- End Header -->
 
-<!-- login Section -->
-<div id="login" class="page">
+<div id="about" class="class=page">
 <div class="container">
     <!-- Title Page -->
     <div class="row">
         <div class="span12">
             <div class="title-page">
-                <h2 class="title">login</h2>
-                <h3 class="title-description">We're currently accepting new client projects. We look forward to serving you.</h3>
             </div>
         </div>
     </div>
     <!-- End Title Page -->
     
-    <!-- login Form -->
+    <!-- People -->
     <div class="row">
-    	<div class="span9">
-        	<form id="login-form" class="login-form" action="#">
-            	<p class="login-username">
-            		<input id="login-username" type="text" placeholder="Username or Email" value="" name="username" />
-                </p>
-				<p class="login-password">
-					<input id="login-password" type="password" name="password" required="required" placeholder="Password"/> 
-				</p>
-                <p class="login-submit">
-                	<a id="login-submit" class="submit">login</a>
-                </p>
-                
-                <div id="response">
+        <!-- Start Profile -->
+    	<div class="span4 profile">
+        	<div class="image-wrap">
+                <div class="hover-wrap">
+                    <span class="overlay-img"></span>
+                    <span class="overlay-text-thumb">User</span>
                 </div>
-            </form>
-         
+                <img src="_include/img/profile/profile-01.jpg" alt="Username">
+            </div>
+            <h3 class="profile-name" id="profile-name">Username</h3>
+			<p id='about'>About section</p>
+            
+            <div class="social">
+            	<ul class="social-icons">
+                	<li><a href="http://twitter.com/jrm1209"><i class="font-icon-social-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/joel.meister.1"><i class="font-icon-social-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/joelrmeister"><i class="font-icon-social-linkedin"></i></a></li>
+                    <li><a href="plus.google.com/108713380785575315626"><i class="font-icon-social-google-plus"></i></a></li>
+                    <li><a href="mailto:joelmeister1209@gmail.com"><i class="font-icon-social-email"></i></a></li>
+					<!--
+                    <li><a href="#"><i class="font-icon-social-vimeo"></i></a></li>
+                    <li><a href="#"><i class="font-icon-social-dribbble"></i></a></li>
+					-->
+                </ul>
+            </div>
+			<!-- this needs to be on the right/bottom if too small-->
+			
+        </div>
+        <!-- End Profile -->        
+    </div>
+    <!-- End People -->
+</div>
+</div>
+<!-- End About Section -->
+
+<div id="social-area" class="page">
+	<div class="container">
+    	<div class="row">
+            <div class="span12">
+            </div>
         </div>
     </div>
-    <!-- End login Form -->
 </div>
-</div>
-<!-- End login Section -->
-
 
 <!-- Footer -->
 <footer>
@@ -184,10 +201,67 @@
 <script src="_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
 <script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
 <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+<script src="_include/js/jquery.main.js"></script> <!-- Default JS -->
 <script src="_include/js/main.js"></script> <!-- Default JS -->
 <!-- End Js -->
-<script src="_include/js/jquery.main.js"></script>
-<script src="_include/js/jquery-login.js"></script>
-
+<script>
+jQuery(document).ready(function() {
+	var data = parseUrl(window.location.href).search.replace('?','');
+	if (! data){
+		var uname = window.localStorage.getItem('username');
+		if (!uname) return false;
+		console.log(parseUrl(window.location.href));
+		window.location.replace(parseUrl(window.location.href) + "?username=" + uname);
+		//return false;
+	}
+	console.log(data);
+	
+	jQuery(document).ready(function() {
+		$.ajax({
+			type: "GET",
+			url: "_include/php/db_functions.php",
+			contentType : "application/json", 
+			dataType: 'json',
+			data: data,
+			cache: false,
+			success: function(data){
+				displayPage(data);
+			},
+			error: function(jqXHR){
+				var json=jqXHR.responseText;
+				var obj = JSON.parse(json);
+				$("#errmsg").html(obj.error);
+			}
+		});
+	});
+	
+	var uname = window.localStorage.getItem('username');
+	console.log(uname);
+	if (uname){		
+		$('#profile-link a').text(uname);
+		$('#profile-link a').attr("href","profile.php?" + uname);
+	} else {
+		$('#login-link').show();
+        $('#register-link').show();
+	}
+	
+	function displayPage(data){
+		console.log('output: ' + JSON.stringify(data));
+		$('h3#profile-name').html(data.username);
+		$('.overlay-text-thumb').html(data.username);
+		$('.profile-title').html(data.username);
+		
+		$('p#about').html(data.about);
+		$('.profile-title-description').html(data.about);
+		
+		return false;
+	}
+	function parseUrl( url ) {
+		var a = document.createElement('a');
+		a.href = url;
+		return a;
+	}
+});
+</script>
 </body>
 </html>

@@ -1,15 +1,18 @@
 <?php
 
-/*
-Title:	Common Functions
-Author:	Dylan Boltz
-Date:	1/31/2014
+/*connect to database*/
+function db_connect($servername="localhost",
+	$username="joelmeis_joel",
+	$db_pass="Spiderman0",
+	$dbname="joelmeis_test_create_DB"){
 
-The purpose of this code is to provide functions that are called often.  As more functions are added
-it may be necessary to break this file into multiple files according to the nature of different groups
-of functions.
-
-*/
+	// Create connection
+	$con = new mysqli($servername, $username, $db_pass, $dbname);
+	if (mysqli_connect_errno($con)){
+		output_error('Could not connect to database');
+	}
+	return $con;
+}
 
 function test_input($data) {
    $data = trim($data);

@@ -105,7 +105,11 @@
             	<li><a href="index.html" class="external">Home</a></li>
 				<li><a href="lol.php" class="external">LoL</a></li>
 				<li><a href="dota.php" class="external">DotA</a></li>
+				<li><a href="recruit.php" class="external">Recruit</a></li>
                 <li><a href="profile.php" class="external">Profile</a></li>
+				
+                <li id="login-link" style="display:none;"><a href="login.php" class="external">Login</a></li>
+                <li id="register-link" style="display:none;"><a href="register.php" class="external">Register</a></li>
 				<li class="current"><a href="javascript:void(0);" class="external">About us</a></li>
             </ul>
         </nav>
@@ -136,7 +140,7 @@
             		<input id="register-username" type="text" placeholder="Username" value="" name="username" />
                 </p>
             	<p class="register-name">
-            		<input id="register-username" type="text" placeholder="Name" value="" name="name" />
+            		<input id="register-name" type="text" placeholder="Name" value="" name="name" />
                 </p>
                 <p class="register-email">
                 	<input id="register-email" type="text" placeholder="Email Address" value="" name="email" />
@@ -192,6 +196,11 @@ jQuery(document).ready(function() {
 	$("#register-submit").on('click',function() {
 		$contact_form = $('#register-form');
 		var fields = $contact_form.serialize();
+		if( !$('#register-username').val() ||  !$('#register-name').val() ||
+			!$('#register-email').val() || !$('#register-password').val()){
+			alert("Please enter all fields");
+			return false;
+		}
 		$.ajax({
 			type: "POST",
 			url: "_include/php/register.php",
