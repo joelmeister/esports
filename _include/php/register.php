@@ -13,7 +13,8 @@ $admin_email = 'joelmeister1209@gmail.com'; // Your Email
 $message_min_length = 5; // Min Message Length
 
 
-class Register_Form{
+class Register_Form
+{
 	function __construct($details){
 		
 		$this->username = test_input(stripslashes($details['username']));
@@ -60,32 +61,21 @@ class Register_Form{
 			$this->response_status = 0;
 		}
 	}
-	function dbConnect($servername="localhost",
-		$username="joelmeis_joel",
-		$db_pass="Spiderman0",
-		$dbname="joelmeis_test_create_DB"){
-
-		// Create connection
-		$con = new mysqli($servername, $username, $db_pass, $dbname);
-		if (mysqli_connect_errno($con)){
-			output_error('Could not connect to database');
-		}
-		return $con;
-	}
 	function getProfile(){
-		$db_field = 'USERNAME,EMAIL';
-		$db_table = 'ESPORTS_USERS';
+		$db_field = 'id,email';
+		$db_table = 'users';
+		$dbReader = new DBReader();
 		/**/
-		$con=$this->dbConnect();
+		$con=$dbReader->db_connect();
 		/**/
-		$result = mysqli_query($con, "SELECT ".$db_field." FROM ".$db_table." WHERE EMAIL = '" . $this->email . "'");
+		$result = mysqli_query($con, "SELECT ".$db_field." FROM ".$db_table." WHERE email = '" . $this->email . "'");
 		
 		if($row = mysqli_fetch_array($result)){
 //email already exists
 			$this->response_status = 0;	
 			$this->response_html .= '<p>Email address already in use</p>';
 		}else{
-			$result = mysqli_query($con, "SELECT ".$db_field." FROM ".$db_table." WHERE USERNAME = '" . $this->username . "'");		
+			$result = mysqli_query($con, "SELECT ".$db_field." FROM ".$db_table." WHERE username = '" . $this->username . "'");		
 			if($row = mysqli_fetch_array($result)){
 //username already exists
 				$this->response_status = 0;	
@@ -99,9 +89,13 @@ class Register_Form{
 		mysqli_close($con);
 	}
 	function update($con){		
-		$db_field = 'USERNAME,EMAIL,ACTUALNAME,PASSWORD';
-		$db_table = 'ESPORTS_USERS';
-		$db_value = "'".$this->username."','".$this->email."','".$this->name."','".$this->password."'";
+		$db_field = 'username,email,firstname,lastname,password';
+		$db_table = 'users';
+		$db_value = "'".$this->username;
+		$db_value .= "','".$this->email;
+		$db_value .= "','".$this->name;
+		$db_value .= "','"."''";
+		$db_value .= "','".$this->password."'";
 		/*Update registration info*/
 		$sql="INSERT INTO ".$db_table."  (".$db_field.") VALUES (".$db_value.");";
 		/**/

@@ -20,7 +20,7 @@ jQuery(document).ready(function() {
 			},
 			error: function(jqXHR){
 				var json=jqXHR.responseText;
-				console.log(json);
+				console.log("error:" + json);
 			}
 		});
 	}
@@ -33,7 +33,10 @@ jQuery(document).ready(function() {
 		
 		$('p#about').html(data.about);
 		$('.profile-title-description').html(data.about);
-		$('img.profile').attr('src','_include/img/' + data.avatar);
+		if (data.avatar)
+			$('img.profile').attr('src','_include/img/' + data.avatar);
+		else
+			$('img.profile').text("No image found");
 		
 		//social
 		if (data.twitter) 

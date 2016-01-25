@@ -3,13 +3,13 @@
 /*connect to database*/
 function db_connect($servername="localhost",
 	$username="joelmeis_joel",
-	$db_pass="Spiderman0",
-	$dbname="joelmeis_test_create_DB"){
+	$db_pass="spiderman0",
+	$dbname="joelmeis_test_create_db"){
 
-	// Create connection
+	// create connection
 	$con = new mysqli($servername, $username, $db_pass, $dbname);
 	if (mysqli_connect_errno($con)){
-		output_error('Could not connect to database');
+		output_error('could not connect to database');
 	}
 	return $con;
 }
@@ -32,9 +32,17 @@ function return_success(){
 }
 
 function get_day_num($day){
-	$day_nums = array('S' => 0, 'M' => 1, 'T' => 2, 'W' => 3, 
-		'R' => 4, 'F' => 5, 'A' => 6);
+	$day_nums = array('s' => 0, 'm' => 1, 't' => 2, 'w' => 3, 
+		'r' => 4, 'f' => 5, 'a' => 6);
 	return $day_nums[$day];
+}
+
+function debug_to_console($data) {
+	if(is_array($data) || is_object($data)) {
+		echo("<script>console.log('php: ".json_encode($data)."');</script>");
+	} else {
+		echo("<script>console.log('php: $data');</script>");
+	}
 }
 
 // Returns true if no access restrictions apply at the time of the request
@@ -156,14 +164,6 @@ function is_expired($con, $expiration_date){
 
 function IsNullOrEmptyString($question){
     return (!isset($question) || trim($question)==='');
-}
-
-function debug_to_console($data) {
-	if(is_array($data) || is_object($data)) {
-		echo("<script>console.log('PHP: ".json_encode($data)."');</script>");
-	} else {
-		echo("<script>console.log('PHP: $data');</script>");
-	}
 }
 
 /* function easy_cookie
