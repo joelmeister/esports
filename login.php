@@ -94,6 +94,7 @@
 
 <!-- Header -->
 <header>
+<!--
     <div class="sticky-nav">
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         
@@ -115,8 +116,8 @@
                 <li id="logout-link" style="display:none;"><a class="external">Log out</a></li>
             </ul>
         </nav>
-        
     </div>
+-->
 </header>
 <!-- End Header -->
 
@@ -186,6 +187,7 @@
 <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
 <script src="_include/js/main.js"></script> <!-- Default JS -->
 <!-- End Js -->
+<script src="_include/js/headerinc.js"></script>
 <script src="_include/js/jquery.main.js"></script>
 <script src="_include/js/jquery-login.js"></script>
 

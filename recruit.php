@@ -93,6 +93,7 @@
 
 <!-- Header -->
 <header>
+<!--
     <div class="sticky-nav">
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         
@@ -114,6 +115,7 @@
         </nav>
         
     </div>
+-->
 </header>
 <!-- End Header -->
 
@@ -271,6 +273,7 @@
 <script src="_include/js/main.js"></script> <!-- Default JS -->
 <script src="_include/js/dataTables.min.js"></script>
 <!-- End Js -->
+<script src="_include/js/headerinc.js"></script>
 <script src="_include/js/jquery.main.js"></script>
 <script src="_include/js/jquery-recruit.js"></script>
 </body>

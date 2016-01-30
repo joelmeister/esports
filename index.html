@@ -130,7 +130,6 @@
                 <li><a href="about.php" class="external">About Us</a></li>
             </ul>
         </nav>
-        
     </div>
 </header>
 <!-- End Header -->
@@ -354,19 +353,8 @@
 <script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
 <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
 <script src="_include/js/main.js"></script> <!-- Default JS -->
+<script src="_include/js/headerinc.js"></script>
+<script src="_include/js/jquery.main.js"></script>
 <!-- End Js -->
-<script>
-jQuery(document).ready(function() {
-	var uname = window.localStorage.getItem('username');
-	console.log(uname);
-	if (uname){		
-		$('#profile-link a').text(uname);
-		$('#profile-link a').attr("href","profile.php?username=" + uname);
-	} else {
-		$('#login-link').show();
-        $('#register-link').show();
-	}
-});
-</script>
 </body>
 </html>
