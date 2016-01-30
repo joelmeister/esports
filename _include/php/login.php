@@ -1,21 +1,10 @@
 <?php
-
-/*
-Title:	Login
-Author:	Dylan Boltz
-Date:	11/16/2013
-
-The purpose of this code is to return a user their authorization token if the
-correct login credentials were provided.
-
-*/
-
-include 'commonfunctions.php';
-
+require_once("DBReader.php");
 $admin_email = 'joelmeister1209@gmail.com'; // Your Email
 $message_min_length = 5; // Min Message Length
 
-class Login_Form{
+class LoginReader extends DBReader
+{
 	function __construct($details){
 		$this->username = test_input(stripslashes($details['username']));
 		$this->password = hash('sha256', $details['password']);
@@ -27,45 +16,38 @@ class Login_Form{
 	private function validateEmail(){
 		$regex = '/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i';
 	
-		if($this->email == '') { 
+		if(!$this->email) { 
 			return false;
 		} else {
 			$string = preg_replace($regex, '', $this->email);
 		}
 		return empty($string) ? true : false;
 	}
-	function dbConnect($servername="localhost",
-		$username="joelmeis_joel",
-		$db_pass="Spiderman0",
-		$dbname="joelmeis_test_create_DB"){
-
-		// Create connection
-		$con = new mysqli($servername, $username, $db_pass, $dbname);
-		if (mysqli_connect_errno($con)){
-			output_error('Could not connect to database');
-		}
-		return $con;
-	}
 	function getProfile(){
-		$db_field = 'EMAIL,PASSWORD';
-		$db_table = 'ESPORTS_USERS';
+		$db_table = 'users';
+		$db_field = 'email,username,password';
 		
-		/**/
-		$con=$this->dbConnect();
-		/**/
-		if ($this->validateEmail()){
-			$result = mysqli_query($con, "SELECT ".$db_field." FROM ".$db_table." WHERE EMAIL = '" . $this->username . "'");
-		}else {
-			$db_field = 'USERNAME,PASSWORD';
-			$result = mysqli_query($con, "SELECT ".$db_field." FROM ".$db_table." WHERE USERNAME = '" . $this->username . "'");
+		$con=$this->db_connect();
+        $sql = "SELECT ".$db_field." FROM ".$db_table." WHERE ";
+		if ($this->validateEmail())
+        {
+			$sql .= " email = '" . $this->username . "'";
 		}
+        else 
+        {
+			$sql .= " username = '" . $this->username . "'";
+		}
+        $result = mysqli_query($con, $sql);
 		
 		if($row = mysqli_fetch_array($result)){
-			$hash_password = $row['PASSWORD'];
-			if ($hash_password == $this->password){
+			$hash_password = $row['password'];
+			if (!strcmp($hash_password,$this->password))
+            {
 				$this->response_status = 1;
 				$this->response_html = "<p>Success!</p>";
-			} else {
+			} 
+            else 
+            {
 				$this->response_status = 0;
 				$this->response_html = "<p>Password incorrect</p>";
 			}
@@ -102,7 +84,7 @@ class Login_Form{
 	}
 }
 
-$login_form = new Login_Form($_POST, $admin_email, $message_min_length);
+$login_form = new LoginReader($_POST, $admin_email, $message_min_length);
 $login_form->sendRequest();
 
 die();

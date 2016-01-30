@@ -69,7 +69,7 @@
 <!-- End of Splash Screen -->
 <!-- Header -->
 <header>
-		<div class="sticky-nav">
+		<!--<div class="sticky-nav">
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         
         <div id="logo">
@@ -88,7 +88,7 @@
 		<li id="logout-link" style="display:none;"><a class="external">Log out</a></li>
             </ul>
         </nav>
-    </div>
+    </div>-->
 </header>
 <!-- End Header -->
 <!-- Our Work Section -->
@@ -193,6 +193,7 @@
 <script src="_include/js/main.js"></script> <!-- Default JS -->
 <script src="_include/js/dataTables.min.js"></script>
 <!-- End Js -->
+<script src="_include/js/headerinc.js"></script>
 <script src="_include/js/jquery.main.js"></script>
 <script src="_include/js/jquery-profile.js"></script>
 </body>

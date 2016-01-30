@@ -1,7 +1,4 @@
 jQuery(document).ready(function() {
-    var uname = window.localStorage.getItem('username');
-    checkLogin();
-
     $("#login-submit").on('click',function() {
         $contact_form = $('#login-form');
         var fields = $contact_form.serialize();
@@ -16,8 +13,8 @@ jQuery(document).ready(function() {
                     $('#login-form textarea').val('');
                     window.localStorage.setItem("username",response.username);
                     checkUrl(response.username);
-                    console.log(parseUrl(window.location.href));
-                    window.location.replace("profile.php?username=" + uname);
+                    var url = "profile.php?username=" + response.username;
+                    window.location.replace(url);
                 } 
                 else {
                     window.localStorage.setItem("username",'');

@@ -3,12 +3,13 @@ function checkLogin(){
     var uname = window.localStorage.getItem('username');
     if (uname){		
         $('#profile-link a').text(uname);
-        $('#profile-link a').attr("href","profile.php?" + uname);
+        $('#profile-link a').attr("href","profile.php?username=" + uname);
         $('#logout-link').show();
     } else {
         $('#login-link').show();
         $('#register-link').show();
     }
+    console.log("url checked " + uname);
 }
 
 function parseUrl( url ) {
@@ -26,6 +27,11 @@ function checkUrl(data){
 }
 
 jQuery(document).ready(function() {
+	var data = parseUrl(window.location.href).search.replace('?','');
+    appendHeader();
+	checkUrl(data);
+	checkLogin();
+	
     $("#logout-link").on('click',function() {
         var uname = window.localStorage.getItem('username');
         window.localStorage.removeItem('username');
@@ -51,4 +57,4 @@ jQuery(document).ready(function() {
             });
         return false;
     });
-);
+});

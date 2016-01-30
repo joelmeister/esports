@@ -1,12 +1,6 @@
 jQuery(document).ready(function() {
 	var data = parseUrl(window.location.href).search.replace('?','');
-	checkUrl(data);
-	
-	checkLogin();
 	loadProfile(data);
-
-
-	
 	function loadProfile(data){
 		$.ajax({
 			type: "GET",
@@ -20,13 +14,11 @@ jQuery(document).ready(function() {
 			},
 			error: function(jqXHR){
 				var json=jqXHR.responseText;
-				console.log("error:" + json);
 			}
 		});
 	}
 	
 	function displayPage(data){
-		console.log('output: ' + JSON.stringify(data));
 		$('h1#profile-name').html(data.username);
 		$('.overlay-text-thumb').html(data.username);
 		$('.profile-title').html(data.username);

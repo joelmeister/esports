@@ -16,7 +16,6 @@ class ProfileReader extends DBReader
 		$username = $this->test_input($_GET["username"]);
 		$sql = "SELECT * FROM users WHERE username = '" . $username . "'";
 		$result = mysqli_query($con, $sql);
-		
 		if($row = mysqli_fetch_array($result)){
 				$sql = "SELECT * FROM profile WHERE user_id = '" . $row['id'] . "'";
 				$result = mysqli_query($con, $sql);
